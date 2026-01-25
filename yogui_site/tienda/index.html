@@ -4,30 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda | Alma & Raíz</title>
+    <title>Tienda | Victoria Merling</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <!-- Wompi Widget Checkout -->
+    <script src="https://checkout.wompi.co/widget.js"></script>
     <style>
         body {
-            padding-top: 80px;
+            /* padding-top: 80px; Removed for consistency */
         }
 
+        /* 
         .navbar {
             background-color: var(--primary-color);
             position: fixed;
             top: 0;
-        }
+        } 
+        Removed explicit navbar coloring to see if global styles take over correctly or if we need to adapt.
+        */
     </style>
 </head>
 
 <body>
 
     <nav class="navbar">
-        <div class="logo">Alma & Raíz</div>
+        <div class="logo">Victoria Merling</div>
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="../index.html#quien-soy">Quién Soy</a></li>
@@ -56,7 +61,8 @@
                         <button class="btn-outline"
                             style="color: var(--primary-color); border-color: var(--primary-color);"
                             onclick="openModal('cordyceps-info')">Ver Detalles</button>
-                        <button class="btn-primary" onclick="openOrderModal('Cordyceps')">Comprar</button>
+                        <button class="btn-primary" onclick="initializeWompiPayment('cordyceps')">Pagar con
+                            Wompi</button>
                     </div>
                 </div>
                 <!-- Product 2 -->
@@ -71,7 +77,8 @@
                         <button class="btn-outline"
                             style="color: var(--primary-color); border-color: var(--primary-color);"
                             onclick="openModal('melena-info')">Ver Detalles</button>
-                        <button class="btn-primary" onclick="openOrderModal('Melena de León')">Comprar</button>
+                        <button class="btn-primary" onclick="initializeWompiPayment('melena-de-leon')">Pagar con
+                            Wompi</button>
                     </div>
                 </div>
             </div>
@@ -113,8 +120,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn-primary" onclick="closeModal('cordyceps-info'); openOrderModal('Cordyceps')">Comprar
-                    Ahora</button>
+                <button class="btn-primary"
+                    onclick="closeModal('cordyceps-info'); initializeWompiPayment('cordyceps')">Pagar con Wompi</button>
             </div>
         </div>
     </div>
@@ -153,7 +160,8 @@
             </div>
             <div class="modal-footer">
                 <button class="btn-primary"
-                    onclick="closeModal('melena-info'); openOrderModal('Melena de León')">Comprar Ahora</button>
+                    onclick="closeModal('melena-info'); initializeWompiPayment('melena-de-leon')">Pagar con
+                    Wompi</button>
             </div>
         </div>
     </div>
@@ -164,7 +172,7 @@
             <span class="close" onclick="closeModal('pedido')">&times;</span>
             <h2>Finalizar Pedido</h2>
             <form class="booking-form" action="https://formsubmit.co/steinhjk@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="Nuevo Pedido Tienda - Alma & Raíz">
+                <input type="hidden" name="_subject" value="Nuevo Pedido Tienda - Victoria Merling">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_autoresponse"
                     value="Gracias por tu pedido. Por favor realiza la transferencia a la cuenta Bancolombia XXXX y envía el comprobante.">
@@ -207,8 +215,59 @@
         </div>
     </div>
 
+    <!-- Modal: Datos del Cliente para Wompi -->
+    <div id="modal-wompi-customer" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('wompi-customer')">&times;</span>
+            <h2>Datos de Envío</h2>
+            <form id="wompi-customer-form" class="booking-form">
+                <input type="hidden" id="wompi-product-id" value="">
+
+                <div class="form-group">
+                    <label>Producto</label>
+                    <p id="wompi-product-name" style="font-weight: bold; color: var(--primary-color);"></p>
+                </div>
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <div class="quantity-control">
+                        <input type="number" id="wompi-quantity" value="1" min="1" max="10" required>
+                    </div>
+                    <p id="wompi-total" style="margin-top: 0.5rem; font-weight: bold;"></p>
+                </div>
+                <div class="form-group">
+                    <label>Nombre Completo *</label>
+                    <input type="text" id="wompi-name" required placeholder="Tu nombre completo">
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="wompi-email" required placeholder="tu@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Celular *</label>
+                    <input type="tel" id="wompi-phone" required placeholder="3001234567">
+                </div>
+                <div class="form-group">
+                    <label>Dirección de Envío *</label>
+                    <input type="text" id="wompi-address" required placeholder="Ciudad, Barrio, Dirección completa">
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%;">Continuar al Pago</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Resultado del Pago -->
+    <div id="modal-payment-result" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <span class="close" onclick="closeModal('payment-result')">&times;</span>
+            <div id="payment-result-content">
+                <!-- Contenido dinámico -->
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Alma & Raíz. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Victoria Merling. Todos los derechos reservados.</p>
     </footer>
 
     <script src="../script.js"></script>
