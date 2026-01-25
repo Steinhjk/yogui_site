@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos | Alma & Raíz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            position: fixed;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Alma & Raíz</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../index.html#quien-soy">Quién Soy</a></li>
+            <li><a href="../servicios/index.html">Servicios</a></li>
+            <li><a href="index.html" style="color: var(--secondary-color);">Recursos</a></li>
+            <li><a href="../tienda/index.html">Tienda</a></li>
+            <li><a href="../reserva/index.html">Reserva</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
+
+    <section id="recursos" class="section resources">
+        <div class="container">
+            <h2>Recursos para el Camino</h2>
+
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab(event, 'Videos')">Videos</button>
+                <button class="tab-link" onclick="openTab(event, 'Libros')">Libros</button>
+                <button class="tab-link" onclick="openTab(event, 'Audios')">Meditaciones</button>
+            </div>
+
+            <div id="Videos" class="tab-content active">
+                <div class="resource-grid">
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/bY8rZ-BG5D8"
+                            title="Curandera" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Curandera - Espíritu de la Tierra</h3>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/A8VcIVUPQLI"
+                            title="Kundalini Yoga" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Kundalini Yoga: El Despertar</h3>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/_b6cmnpII9U"
+                            title="Hongos Mágicos" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Hongos Mágicos: Ciencia y Terapia</h3>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/ZSsb7ZVKRxI"
+                            title="Kundalini Sahiba Kriya" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Kundalini Yoga: Sahiba Kriya</h3>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/6iY2OL-bAtM"
+                            title="Psilocybe Ciencia Mística" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Psilocybe: La Ciencia de la Mística</h3>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/5d3mbHNRgxY"
+                            title="Kundalini Video Completo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Kundalini Yoga en Español</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Libros" class="tab-content">
+                <div class="resource-grid">
+                    <div class="resource-card book-card">
+                        <div class="icon">📖</div>
+                        <h3>El Poder del Ahora</h3>
+                        <a href="https://static.wixstatic.com/ugd/c33f8d_0a950cb5514b433b934e62973957252f.pdf"
+                            target="_blank" class="btn-small">Descargar</a>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">📖</div>
+                        <h3>Autobiografía de un Yogui</h3>
+                        <a href="https://formarse.com.ar/libros/Libros%20para%20descargar%20de%20maestros%20espirituales/Autobiograf%C3%ADa-de-un-yogi.pdf"
+                            target="_blank" class="btn-small">Descargar</a>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">🍄</div>
+                        <h3>Psilocibes: The Mushrooms</h3>
+                        <a href="https://www.researchgate.net/profile/Jose-Carlos-Bouso/publication/331400061_Psilocibes_-the_mushrooms-/links/5c77c488458515831f75e431/Psilocibes-the-mushrooms.pdf"
+                            target="_blank" class="btn-small">Descargar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Audios" class="tab-content">
+                <div class="resource-grid">
+                    <div class="resource-card audio-card">
+                        <div class="icon">🎧</div>
+                        <h3>Meditación Shamatha</h3>
+                        <audio controls class="audio-player">
+                            <source
+                                src="https://lwfiles.mycourse.app/paramita-public/publicFiles/1-Meditacion%20Shamatha.mp3"
+                                type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <p class="note">Visita <a href="https://paramita.org" target="_blank">paramita.org</a> para más
+                            contenido.</p>
+                    </div>
+                    <div class="resource-card audio-card">
+                        <!-- YouTube embedded as "Audio" source -->
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/JrywDAGY50E"
+                            title="Rodrigo Restrepo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Rodrigo Restrepo Ángel</h3>
+                        <p class="note">De Rodrigo Restrepo Ángel. Visita su <a
+                                href="https://www.youtube.com/@rodrigorestrepoangel-happy3849" target="_blank">canal
+                                aquí</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Alma & Raíz. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kundalini Yoga | Victoria Merling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .service-page-hero {
+            height: 60vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../kundalini_yoga.jpg');
+            /* Use existing image or placeholder */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .service-content {
+            padding: 4rem 10%;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s;
+            margin-top: 2rem;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar" style="position: relative; background: var(--darker-bg);">
+        <div class="logo"><a href="../index.html">Victoria Merling</a></div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../index.html#medicina-ancestral">Servicios</a></li>
+            <li><a href="../tienda.html">Tienda</a></li>
+            <li><a href="../index.html#quien-soy">Quién Soy</a></li>
+            <li><a href="../reserva/index.html">Reserva</a></li>
+        </ul>
+    </nav>
+
+    <header class="service-page-hero">
+        <div class="hero-content">
+            <h1>Kundalini Yoga y Meditación</h1>
+            <p>La tecnología de la consciencia</p>
+        </div>
+    </header>
+
+    <section class="service-content">
+        <div class="container" style="text-align: center; max-width: 800px;">
+            <h2 class="white-text">Energía Vital</h2>
+            <p>
+                Kundalini Yoga es una práctica dinámica y poderosa que combina posturas físicas, respiración
+                (pranayama), meditación y mantras.
+                Es conocida como el yoga de la consciencia, diseñada para despertar tu potencial creativo y espiritual.
+            </p>
+            <p>
+                En cada sesión trabajaremos para fortalecer el sistema nervioso, equilibrar el sistema glandular y
+                purificar el cuerpo y la mente.
+            </p>
+
+            <a href="https://wa.me/573025611010?text=Hola,%20me%20gustaría%20agendar%20una%20clase%20de%20Kundalini%20Yoga"
+                class="whatsapp-btn" target="_blank">
+                Agendar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Victoria Merling. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

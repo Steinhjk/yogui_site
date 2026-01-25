@@ -1,0 +1,1152 @@
+:root {
+    --primary-color: #f0e6d2;
+    /* Light Cream/Gold for text */
+    --secondary-color: #d4af37;
+    /* Metallic Gold */
+    --accent-color: #8f9779;
+    /* Sage Green */
+    --dark-bg: #2e2e2a;
+    /* Dark Olive/Grey */
+    --darker-bg: #1a1a18;
+    /* Nearly Black */
+    --light-bg: #f5f5f0;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --rainbow-gradient: linear-gradient(90deg, #ff9a9e 0%, #fecfef 20%, #a6c0fe 40%, #f68084 60%, #fdbb2d 80%, #1a1a18 100%);
+    --rainbow-overlay: linear-gradient(135deg, rgba(60, 60, 50, 0.9), rgba(30, 30, 30, 0.95));
+    --modal-bg: rgba(0, 0, 0, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: var(--dark-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 0.05em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    color: var(--text-light);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.section {
+    padding: 5rem 10%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+}
+
+.about-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-image-placeholder {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* .img-box removed */
+
+.profile-img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Split Screen */
+.services-split {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.split {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: flex 0.5s ease;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.split:hover {
+    flex: 2;
+}
+
+.split .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s;
+}
+
+.split:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.split .content {
+    z-index: 10;
+    text-align: center;
+    color: var(--text-light);
+    transition: transform 0.3s;
+    padding: 0 2rem;
+    /* Add horizontal padding explicitly */
+    display: flex;
+    /* Use flex column to space items */
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    /* Gap between Title, Text, and Button */
+}
+
+.split:hover .content {
+    transform: scale(1.1);
+}
+
+.split h2 {
+    color: var(--text-light);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.btn-outline {
+    /* margin-top removed in favor of flex gap */
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--text-light);
+    background: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--text-light);
+    color: var(--text-dark);
+}
+
+.split.left {
+    background-image: url('kundalini_split.png');
+    border-right: 2px solid var(--secondary-color);
+    background-blend-mode: luminosity;
+    background-color: #333;
+}
+
+.split.right {
+    background-image: url('therapy_service.jpg');
+    background-blend-mode: luminosity;
+    background-color: #333;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-bg);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 3rem;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 8px;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.pricing-badge {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.modal-body h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.modal-footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/* Tooltip Styles */
+.tooltip-trigger {
+    position: relative;
+    cursor: help;
+    border-bottom: 1px dotted var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    /* Position above */
+    left: 50%;
+    margin-left: -125px;
+    /* Center */
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.85rem;
+    font-weight: 400;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-trigger:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Resources */
+.resources {
+    background-color: #f9f9f9;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tab-link {
+    padding: 0.8rem 2rem;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.tab-link.active,
+.tab-link:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.product-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: none;
+    /* Hide emoji if strictly using images, or remove class utilization */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+}
+
+.product-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+/* Branding & Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .services-split {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .split {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+}
+
+/* Intention Section */
+.intention {
+    background: var(--dark-bg);
+    text-align: center;
+    padding: 6rem 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.rainbow-text {
+    background: var(--rainbow-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* Keep this if you want rainbow option available */
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.white-text {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Improve readability on dark bg */
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.intention-content p {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Services Grid */
+.services-grid-section {
+    background-color: var(--darker-bg);
+    text-align: center;
+}
+
+.services-grid-section h3 {
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s;
+    width: 150px;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    /* Circle style placeholder */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.service-item h4 {
+    font-size: 1rem;
+    color: var(--text-main);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* Hero Overlay Update */
+.hero {
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--rainbow-overlay);
+    /* Dark rainbow tint */
+    opacity: 0.6;
+}
+
+.hero-content {
+    z-index: 10;
+    position: relative;
+}
+
+.hero-decorative-line {
+    width: 100px;
+    height: 2px;
+    background: var(--rainbow-gradient);
+    margin: 1rem auto;
+}
+
+/* ===========================
+   DETAILED MODAL STYLES
+   =========================== */
+
+.large-modal {
+    max-width: 800px;
+    /* Wider than standard */
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-style: italic;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.info-section {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.info-section h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-section ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    color: #444;
+}
+
+.info-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Specific Boxes */
+.science-box {
+    background-color: rgba(220, 240, 255, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #4a90e2;
+}
+
+.risk-box {
+    background-color: rgba(255, 230, 230, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #d9534f;
+}
+
+.testimonial-box {
+    background-color: rgba(240, 240, 235, 0.5);
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.quote {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.author {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.kit-list-modal li {
+    list-style-type: none;
+    background: #f9f9f9;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    border-left: 3px solid var(--secondary-color);
+}
+
+/* Scrollbar for modal */
+.large-modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.large-modal::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+/* ===========================
+   UPDATED TRIAD LAYOUT & ICONS
+   =========================== */
+
+.triad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.ingredient-icons {
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.package-desc-short {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Ensure all cards in triad have same height/style */
+.therapy-card-vertical {
+    background: rgba(55, 55, 50, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.therapy-card-vertical:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+@media (min-width: 1024px) {
+    .triad-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Force 3 columns on large screens */
+    }
+}
+
+/* ===========================
+   NEW SHOP & SERVICES STYLES 
+   =========================== */
+
+/* Sections */
+/* ... previous styles ... */
+
+.service-logo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* border: 2px solid var(--secondary-color); */
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-logo img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    filter: none;
+}
+
+/* Adjust filter if icons are already white or colored. 
+   Assuming generated icons are black on white/transparent, 
+   and theme is dark, we might need invert(1) or brightness(0) invert(1).
+   Let's assume they are black line art on transparent. 
+   If they have white backgrounds, we might need mix-blend-mode or just border-radius.
+*/
+
+.service-info-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.section-intro {
+    text-align: center;
+    color: var(--text-main);
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+/* Ancestral Medicine Grid */
+.packages-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    background: rgba(46, 46, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--secondary-color);
+}
+
+.package-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+}
+
+.package-header h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.package-header h3 span {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--accent-color);
+}
+
+.package-header .price {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.package-body ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.package-body li {
+    margin-bottom: 0.8rem;
+    color: var(--text-main);
+}
+
+.package-body .note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* Micro Dosis Specific */
+.micro-card {
+    background: rgba(30, 45, 30, 0.6);
+    /* Slightly greener tint */
+}
+
+.kit-list {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+/* Holistic Therapy */
+.horizontal-card {
+    background: linear-gradient(to right, rgba(46, 46, 42, 0.8), rgba(20, 20, 20, 0.8)), url('therapy_service.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.therapy-info {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+.therapy-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-small {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.compact-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.compact-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Yoga Classes */
+.yoga-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.yoga-option {
+    background: var(--darker-bg);
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.yoga-option:hover {
+    border-color: var(--accent-color);
+}
+
+.yoga-option.popular {
+    transform: scale(1.1);
+    border-color: var(--secondary-color);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+/* Shop Styles */
+.shop-hero {
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero_background.jpg');
+    /* Reuse or change */
+}
+
+.product-card {
+    background: #fff;
+    color: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.card-image-container {
+    background: #f4f4f4;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.card-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.product-subtitle {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Wompi Button */
+.wompi-btn {
+    width: 100%;
+    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.wompi-placeholder-btn {
+    background: #182643;
+    /* Wompi Dark Blueish */
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.wompi-placeholder-btn:hover {
+    background: #253960;
+}
+
+.wompi-container {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .packages-grid {
+        flex-direction: column;
+    }
+
+    .horizontal-card {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .yoga-option.popular {
+        transform: scale(1);
+    }
+}
+
+/* Fix About Section Config per feedback */
+.about {
+    color: #333;
+    /* Dark text for visibility on white background */
+}
+
+.about h2 {
+    color: var(--dark-bg);
+    /* Dark header on white */
+}
+
+.about p {
+    color: #333;
+    font-weight: 500;
+    /* Increased weight for visibility */
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: var(--darker-bg);
+    text-align: center;
+    padding: 6rem 10%;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    /* Dark glass effect */
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.testimonial-card .quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card .author {
+    font-weight: 600;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+}

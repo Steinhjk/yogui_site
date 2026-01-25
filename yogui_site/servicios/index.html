@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Alma & Raíz</title>
+    <meta name="description"
+        content="Sesiones de Kundalini Yoga y medicina ancestral con psilocibina en Bogotá. Un camino hacia el bienestar y la conexión espiritual.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Adjustments for subpages */
+        body {
+            padding-top: 80px;
+        }
+
+        /* Navbar height adjustment if needed, or rely on existing layout */
+        .navbar {
+            background-color: var(--primary-color);
+            position: fixed;
+            top: 0;
+        }
+
+        /* Ensure nav is visible and distinct */
+        .section {
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Alma & Raíz</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../index.html#quien-soy">Quién Soy</a></li>
+            <li><a href="index.html" style="color: var(--secondary-color);">Servicios</a></li>
+            <li><a href="../recursos/index.html">Recursos</a></li>
+            <li><a href="../tienda/index.html">Tienda</a></li>
+            <li><a href="../reserva/index.html">Reserva</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
+
+    <!-- Services Section (Split Panel) -->
+    <section id="servicios" class="services-split" style="height: calc(100vh - 80px); margin-top: 0;">
+        <div class="split left" onclick="openModal('kundalini')">
+            <div class="overlay"></div>
+            <div class="content">
+                <h2>Kundalini Yoga</h2>
+                <p>La tecnología de la consciencia</p>
+                <button class="btn-outline">Ver Detalles</button>
+            </div>
+        </div>
+        <div class="split right" onclick="openModal('psilocibina')">
+            <div class="overlay"></div>
+            <div class="content">
+                <h2>Medicina Ancestral</h2>
+                <p>Sesiones con Psilocibina (Niños Santos)</p>
+                <button class="btn-outline">Ver Detalles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modals -->
+    <div id="modal-kundalini" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('kundalini')">&times;</span>
+            <h2>Kundalini Yoga</h2>
+            <div class="modal-body">
+                <div class="pricing-badge">1 Clase: $70.000 | 3 Clases: $150.000</div>
+                <h3>Objetivo</h3>
+                <p>Despertar el potencial creativo latente y elevar la consciencia a través de kriya, mantra y
+                    meditación.</p>
+                <h3>Beneficios Terapéuticos</h3>
+                <p>Fortalecimiento del sistema nervioso, equilibrio glandular, reducción del estrés y ansiedad, mayor
+                    claridad mental.</p>
+                <h3>Historia</h3>
+                <p>Una tecnología milenaria traída a occidente por <span class="tooltip-trigger">Yogi Bhajan*<span
+                            class="tooltip-text">Victoria Merling desaprueba enérgicamente cualquier acto de abuso.
+                            Reconocemos las denuncias contra Yogi Bhajan y nos separamos de la figura para centrarnos
+                            puramente en la técnica sanadora del yoga, condenando cualquier comportamiento
+                            abusivo.</span></span>, enfocada en la experiencia directa de la espiritualidad.</p>
+                <h3>Riesgos y Prevenciones</h3>
+                <p>Práctica segura para casi todos. Se recomienda informar sobre lesiones previas o embarazo. Escuchar
+                    al cuerpo es fundamental.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="../reserva/index.html" class="btn-primary" onclick="closeModal('kundalini')">Reservar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-psilocibina" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('psilocibina')">&times;</span>
+            <h2>Medicina Ancestral (Psilocibina)</h2>
+            <div class="modal-body">
+                <div class="pricing-badge">Sesión: $200.000</div>
+                <h3>Objetivo</h3>
+                <p>Facilitar una experiencia profunda de introspección, sanación emocional y conexión con el todo.</p>
+                <h3>Beneficios Terapéuticos</h3>
+                <p>Tratamiento de depresión, ansiedad, TEPT, y adicciones. Fomenta la neuroplasticidad y el bienestar
+                    emocional duradero.</p>
+                <h3>Historia</h3>
+                <p>Uso sagrado por culturas indígenas de todo el mundo, especialmente en Mesoamérica, como herramienta
+                    de comunión con lo divino.</p>
+                <h3>Riesgos y Prevenciones</h3>
+                <p>No apto para personas con antecedentes de psicosis o esquizofrenia. Requiere preparación (dieta) y un
+                    entorno seguro (Set & Setting).</p>
+            </div>
+            <div class="modal-footer">
+                <a href="../reserva/index.html" class="btn-primary" onclick="closeModal('psilocibina')">Reservar</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Alma & Raíz. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | Alma & Raíz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            position: fixed;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Alma & Raíz</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../index.html#quien-soy">Quién Soy</a></li>
+            <li><a href="../servicios/index.html">Servicios</a></li>
+            <li><a href="../recursos/index.html">Recursos</a></li>
+            <li><a href="index.html" style="color: var(--secondary-color);">Tienda</a></li>
+            <li><a href="../reserva/index.html">Reserva</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
+
+    <section id="tienda" class="section shop">
+        <div class="container">
+            <h2>Tienda Holística</h2>
+            <p class="section-subtitle">Medicina de la tierra para tu bienestar</p>
+            <div class="shop-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="../cordyceps.jpg" alt="Cordyceps Militaris" class="product-image">
+                    <h3>Cordyceps</h3>
+                    <p class="product-details">30 Cápsulas | Extracto Puro</p>
+                    <p class="product-desc">Potencia tu energía vital, resistencia física y libido. El hongo del
+                        rendimiento.</p>
+                    <p class="price">$90.000 COP</p>
+                    <div class="product-actions">
+                        <button class="btn-outline"
+                            style="color: var(--primary-color); border-color: var(--primary-color);"
+                            onclick="openModal('cordyceps-info')">Ver Detalles</button>
+                        <button class="btn-primary" onclick="openOrderModal('Cordyceps')">Comprar</button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="../lion_mane.jpg" alt="Melena de León" class="product-image">
+                    <h3>Melena de León</h3>
+                    <p class="product-details">30 Cápsulas | Nootrópico Natural</p>
+                    <p class="product-desc">Claridad mental, memoria y regeneración neuronal. El alimento para tu
+                        cerebro.</p>
+                    <p class="price">$90.000 COP</p>
+                    <div class="product-actions">
+                        <button class="btn-outline"
+                            style="color: var(--primary-color); border-color: var(--primary-color);"
+                            onclick="openModal('melena-info')">Ver Detalles</button>
+                        <button class="btn-primary" onclick="openOrderModal('Melena de León')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <p class="shipping-note">* Envíos a toda Colombia.</p>
+        </div>
+    </section>
+
+    <!-- Product Detail Modals -->
+    <div id="modal-cordyceps-info" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cordyceps-info')">&times;</span>
+            <h2>Cordyceps Militaris</h2>
+            <div class="modal-body">
+                <h3>Mecanismo de Acción Científico</h3>
+                <p>El <em>Cordyceps militaris</em> es reconocido científicamente por su capacidad para potenciar la
+                    producción de <strong>ATP (Adenosín Trifosfato)</strong>, la moneda energética celular. Estudios
+                    demuestran que mejora la función mitocondrial y activa la vía de señalización AMPK, crucial para la
+                    regulación energética intracelular.</p>
+
+                <h3>Beneficios Comprobados</h3>
+                <ul>
+                    <li><strong>Incremento de ATP:</strong> Aumenta la disponibilidad de energía celular hasta un 25%,
+                        reduciendo la fatiga física.</li>
+                    <li><strong>Rendimiento Deportivo:</strong> Mejora la utilización de oxígeno (VO2 máx) y retrasa la
+                        acumulación de ácido láctico.</li>
+                    <li><strong>Función Libido:</strong> Tradicionalmente usado y validado por su efecto en la vitalidad
+                        general y salud sexual.</li>
+                </ul>
+
+                <h3>Bibliografía</h3>
+                <div class="references">
+                    <p class="ref-item">1. Ko, K. M., & Leung, H. Y. (2007). Enhancement of ATP generation capacity...
+                        <em>Chinese Medicine</em>.
+                    </p>
+                    <p class="ref-item">2. Xu, Y. F. (2016). Effect of Polysaccharide from Cordyceps militaris on
+                        Physical Fatigue... <em>Journal of Food and Nutrition Research</em>.</p>
+                    <p class="ref-item">3. Hirsch, K. R., et al. (2017). Cordyceps militaris improves tolerance to
+                        high-intensity exercise... <em>Journal of Dietary Supplements</em>.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="closeModal('cordyceps-info'); openOrderModal('Cordyceps')">Comprar
+                    Ahora</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-melena-info" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('melena-info')">&times;</span>
+            <h2>Melena de León (Hericium erinaceus)</h2>
+            <div class="modal-body">
+                <h3>Mecanismo de Acción Científico</h3>
+                <p>El <em>Hericium erinaceus</em> es único por contener <strong>Hericenonas y Erinacinas</strong>,
+                    compuestos bioactivos capaces de atravesar la barrera hematoencefálica. Estos estimulan la síntesis
+                    del <strong>Factor de Crecimiento Nervioso (NGF)</strong>, esencial para la supervivencia y
+                    regeneración de neuronas.</p>
+
+                <h3>Beneficios Comprobados</h3>
+                <ul>
+                    <li><strong>Neurogénesis:</strong> Promueve el crecimiento de nuevas conexiones neuronales
+                        (sinapsis) y la reparación de la mielina.</li>
+                    <li><strong>Función Cognitiva:</strong> Estudios clínicos sugieren mejoras en memoria, concentración
+                        y claridad mental.</li>
+                    <li><strong>Apoyo Emocional:</strong> Modula la inflamación neuronal, contribuyendo a la reducción
+                        de síntomas de ansiedad y depresión leve.</li>
+                </ul>
+
+                <h3>Bibliografía</h3>
+                <div class="references">
+                    <p class="ref-item">1. Lai, P. L., et al. (2013). Neurotrophic properties of the Lion's Mane
+                        medicinal mushroom... <em>International Journal of Medicinal Mushrooms</em>.</p>
+                    <p class="ref-item">2. Mori, K., et al. (2009). Improving effects of the mushroom Yamabushitake...
+                        on mild cognitive impairment: a double-blind placebo-controlled clinical trial. <em>Phytotherapy
+                            Research</em>.</p>
+                    <p class="ref-item">3. Wong, K. H., et al. (2012). Neuroregenerative potential of lion's mane
+                        mushroom... <em>International Journal of Molecular Sciences</em>.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary"
+                    onclick="closeModal('melena-info'); openOrderModal('Melena de León')">Comprar Ahora</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div id="modal-pedido" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('pedido')">&times;</span>
+            <h2>Finalizar Pedido</h2>
+            <form class="booking-form" action="https://formsubmit.co/steinhjk@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nuevo Pedido Tienda - Alma & Raíz">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_autoresponse"
+                    value="Gracias por tu pedido. Por favor realiza la transferencia a la cuenta Bancolombia XXXX y envía el comprobante.">
+
+                <div class="form-group">
+                    <label>Producto</label>
+                    <select name="producto" id="order-product" required>
+                        <option value="Cordyceps">Cordyceps (30 caps) - $90.000</option>
+                        <option value="Melena de León">Melena de León (30 caps) - $90.000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <div class="quantity-control">
+                        <input type="number" name="cantidad" value="1" min="1" max="10" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input type="tel" name="celular" required>
+                </div>
+                <div class="form-group">
+                    <label>Dirección de Envío (Solo Colombia)</label>
+                    <input type="text" name="direccion" required placeholder="Ciudad, Barrio, Dirección">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <p class="note" style="margin-bottom: 1.5rem;">Pagos vía transferencia Bancolombia a la cuenta
+                    <strong>XXXX</strong>.
+                </p>
+                <button type="submit" class="btn-primary">Confirmar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Alma & Raíz. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

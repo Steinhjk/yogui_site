@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | Victoria Merling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            position: fixed;
+            top: 0;
+        }
+
+        /* Temporary fix for shop image paths if they are in root */
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Victoria Merling</div>
+        <ul class="nav-links">
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#medicina-ancestral">Medicina & Paquetes</a></li>
+            <li><a href="tienda.html" style="color: var(--secondary-color);">Tienda</a></li>
+            <li><a href="index.html#quien-soy">Quién Soy</a></li>
+            <li><a href="reserva/index.html">Reserva</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
+
+    <section id="tienda" class="section shop">
+        <div class="container">
+            <h2>Tienda Holística</h2>
+            <p class="section-subtitle">Medicina de la tierra para tu bienestar</p>
+            <div class="shop-grid">
+                <!-- Product 1: Cordyceps -->
+                <div class="product-card">
+                    <!-- Adjusted path: assuming images are in root based on previous file list -->
+                    <img src="cordyceps.jpg" alt="Cordyceps Militaris" class="product-image">
+                    <h3>Cordyceps</h3>
+                    <p class="product-details">30 Cápsulas | Extracto Puro</p>
+                    <p class="product-desc">Potencia tu energía vital, resistencia física y libido. El hongo del
+                        rendimiento.</p>
+                    <p class="price">$90.000 COP</p>
+                    <div class="product-actions">
+                        <button class="btn-outline" style="color: var(--dark-bg); border-color: var(--dark-bg);"
+                            onclick="openProductModal('cordyceps')">Ver Detalles</button>
+                        <button class="btn-primary wompi-btn" onclick="openProductModal('cordyceps')">Pagar con
+                            Wompi</button>
+                    </div>
+                </div>
+                <!-- Product 2: Lion's Mane -->
+                <div class="product-card">
+                    <img src="lion_mane.jpg" alt="Melena de León" class="product-image">
+                    <h3>Melena de León</h3>
+                    <p class="product-details">30 Cápsulas | Nootrópico Natural</p>
+                    <p class="product-desc">Claridad mental, memoria y regeneración neuronal. El alimento para tu
+                        cerebro.</p>
+                    <p class="price">$90.000 COP</p>
+                    <div class="product-actions">
+                        <button class="btn-outline" style="color: var(--dark-bg); border-color: var(--dark-bg);"
+                            onclick="openProductModal('melena')">Ver Detalles</button>
+                        <button class="btn-primary wompi-btn" onclick="openProductModal('melena')">Pagar con
+                            Wompi</button>
+                    </div>
+                </div>
+            </div>
+            <p class="shipping-note" style="text-align: center; margin-top: 2rem;">* Envíos a toda Colombia.</p>
+        </div>
+    </section>
+
+    <!-- Product Modal (Generic) -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body">
+                <h3 id="modal-title">Producto</h3>
+                <p id="modal-desc">Detalles...</p>
+                <div class="wompi-container">
+                    <button class="wompi-placeholder-btn">Pagar Ahora con Wompi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Victoria Merling. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
