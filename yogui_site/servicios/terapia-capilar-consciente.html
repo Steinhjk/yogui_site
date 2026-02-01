@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kundalini Yoga | Victoria Merling</title>
+    <title>Terapia Capilar Consciente | Victoria Merling</title>
+    <meta name="description"
+        content="Terapia Capilar Consciente en Bogotá. Masaje capilar y relajación profunda para el bienestar integral.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,8 +16,7 @@
     <style>
         .service-page-hero {
             height: 60vh;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../kundalini_yoga.jpg');
-            /* Use existing image or placeholder */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../terapia_capilar_hero.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -51,6 +52,19 @@
         .whatsapp-btn:hover {
             transform: scale(1.05);
         }
+
+        .intention-section {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .intention-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
     </style>
 </head>
 
@@ -60,111 +74,123 @@
         <div class="logo"><a href="../index.html">Victoria Merling</a></div>
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../index.html#medicina-ancestral">Servicios</a></li>
+            <li><a href="index.html">Servicios</a></li>
+            <li><a href="../recursos/index.html">Recursos</a></li>
             <li><a href="../tienda.html">Tienda</a></li>
-            <li><a href="../tienda/index.html">Tienda</a></li>
+            <li><a href="../index.html#quien-soy">Quién Soy</a></li>
             <li class="nav-social-icons" style="display: flex; gap: 0.5rem; margin-left: 1rem;">
-                <a href="https://wa.me/573025611010?text=Conecta%20conmigo%20directamente:" target="_blank"
-                    aria-label="WhatsApp">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                        fill="currentColor">
+                <!-- Social SVGs (identical to Psilocibina.html) -->
+                <a href="https://wa.me/573025611010" target="_blank"><svg width="20" height="20" fill="currentColor"
+                        viewBox="0 0 24 24">
                         <path
                             d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-                    </svg>
-                </a>
-                <a href="https://instagram.com/victoriamerling" target="_blank" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                        fill="currentColor">
+                    </svg></a>
+                <a href="https://instagram.com/victoriamerling" target="_blank"><svg width="20" height="20"
+                        fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                    </svg>
-                </a>
-                <a href="https://www.tiktok.com/@victoriamerling" target="_blank" aria-label="TikTok">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                        fill="currentColor">
-                        <path
-                            d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.01 1.74 4.05 1.11.96 2.58 1.41 4.03 1.47v3.91c-1.24-.03-2.48-.32-3.6-.89-1.07-.57-1.98-1.42-2.58-2.45v8.01c.01 1.63-.44 3.24-1.39 4.54-1.35 1.81-3.66 2.89-5.91 2.83-2.25-.06-4.32-1.34-5.32-3.37-1.12-2.28-.68-5.18 1.17-6.95 1.15-1.08 2.76-1.61 4.31-1.39v3.91c-.81-.13-1.66.1-2.25.68-.62.61-.83 1.57-.46 2.37.38.82 1.3 1.3 2.19 1.14.92-.16 1.54-.99 1.52-1.92V.02z" />
-                    </svg>
-                </a>
+                    </svg></a>
             </li>
         </ul>
     </nav>
 
     <header class="service-page-hero">
         <div class="hero-content">
-            <h1>SESIÓN VIBRACIÓN</h1>
-            <p>Kundalini Yoga y Meditación</p>
+            <h1>TERAPIA CAPILAR CONSCIENTE</h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Un encuentro neurosensorial para la calma
+                profunda y la salud capilar</p>
         </div>
     </header>
 
     <section class="service-content">
-        <div class="container" style="text-align: center; max-width: 800px;">
-            <p
-                style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.4rem; margin-bottom: 2rem; color: var(--secondary-color);">
-                "La verdad es la virtud suprema, pero más suprema aún es la vida veraz." <br>
-                <span style="font-size: 1rem; font-style: normal; color: var(--accent-color);">— Guru Nanak</span>
-            </p>
+        <div class="container" style="max-width: 800px; text-align: center;">
+
+            <div class="intention-section">
+                <p class="intention-quote">"El descanso es la base de la renovación."</p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    La <strong>Terapia Capilar Consciente</strong> es un tratamiento holístico diseñado para liberar la
+                    tensión acumulada,
+                    ofreciendo una sesión de relajamiento profundo con aromaterapia que armoniza cuerpo y mente a través
+                    del cuidado consciente del cuero cabelludo.
+                </p>
+            </div>
+
+            <div class="info-section science-box"
+                style="margin-top: 2rem; border: 1px solid var(--accent-color); padding: 2rem; border-radius: 15px; background: rgba(212, 175, 55, 0.05);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Beneficios del Ritual</h3>
+                <ul style="text-align: left; list-style-type: disc; padding-left: 1.5rem; color: var(--text-main);">
+                    <li><strong>Alivio del estrés:</strong> Reducción inmediata de la fatiga mental y tensión acumulada.
+                    </li>
+                    <li><strong>Salud Capilar:</strong> Mejora la microcirculación y salud del cuero cabelludo.</li>
+                    <li><strong>Estimulación:</strong> Fomenta el crecimiento saludable a través de la oxigenación.</li>
+                    <li><strong>Bienestar Neurológico:</strong> Reduce dolores de cabeza y migrañas tensionales.</li>
+                    <li><strong>Regulación:</strong> Activación del sistema parasimpático para un descanso real.</li>
+                </ul>
+            </div>
 
             <div class="services-grid-container"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; width: 100%; margin-top: 2rem; text-align: left;">
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; width: 100%; margin-top: 3rem; text-align: left;">
                 <div class="info-section"
-                    style="border: 1px solid var(--accent-color); padding: 2rem; border-radius: 15px; background: rgba(143, 151, 121, 0.05);">
-                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">Inversión</h3>
-                    <p><strong>Personalizada:</strong> $70.000</p>
-                    <p><strong>Grupal:</strong> $50.000</p>
-                    <p style="margin-top: 1rem;"><strong>Modalidad:</strong> Presencial / Virtual</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">(Duración: 60-90 min)
-                    </p>
+                    style="border: 1px solid var(--accent-color); padding: 2rem; border-radius: 15px; background: rgba(143, 151, 121, 0.05); height: 100%;">
+                    <h3 style="color: var(--secondary-color);">El Protocolo Consciente</h3>
+                    <p style="margin-bottom: 1rem; font-weight: 500;">Qué incluye esta sesión:</p>
+                    <ul style="list-style-type: disc; padding-left: 1.2rem; color: var(--text-main);">
+                        <li><strong>Drenaje linfático craneal:</strong> Eliminación de toxinas y reducción de
+                            inflamación.</li>
+                        <li><strong>Exfoliación en seco:</strong> Remoción selectiva para mejorar la oxigenación.</li>
+                        <li><strong>Masaje manual miofascial:</strong> Liberación de tensiones crónicas en tejidos
+                            conectivos.</li>
+                        <li><strong>Desbloqueo energético:</strong> Trabajo sutil en el chakra corona para claridad
+                            mental.</li>
+                        <li><strong>Aromaterapia andina:</strong> Uso de aceites esenciales para la regulación
+                            emocional.</li>
+                    </ul>
                 </div>
 
-                <div class="info-section">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Estructura de una Clase</h3>
-                    <p style="margin-bottom: 1rem; color: var(--text-muted);">Una clase clásica de Kundalini Yoga sigue
-                        una secuencia sagrada diseñada para elevar la consciencia:</p>
-                    <ol style="color: var(--text-main); padding-left: 1.2rem;">
-                        <li><strong>Sintonización:</strong> Canto del Adi Mantra para conectar con la sabiduría
-                            interior.</li>
-                        <li><strong>Pranayama:</strong> Ejercicios de respiración para dirigir la energía vital.</li>
-                        <li><strong>Calentamiento:</strong> Movimientos suaves para preparar la columna y el cuerpo.
-                        </li>
-                        <li><strong>Kriya:</strong> Una serie de ejercicios específicos con un objetivo determinado
-                            (detox, vitalidad, calma, etc.).</li>
-                        <li><strong>Relajación Profunda:</strong> Integración de los beneficios físicos y energéticos.
-                        </li>
-                        <li><strong>Meditación:</strong> Enfoque mental y uso de mantras para la transformación.</li>
-                        <li><strong>Cierre:</strong> El Eterno Sol y bendición final.</li>
-                    </ol>
+                <div class="info-section"
+                    style="border: 1px solid var(--accent-color); padding: 2rem; border-radius: 15px; background: rgba(143, 151, 121, 0.05); height: 100%;">
+                    <h3 style="color: var(--secondary-color);">Inversión y Tiempo</h3>
+                    <p style="font-size: 1.5rem; color: var(--accent-color); font-weight: 600; margin: 1rem 0;">$180.000
+                    </p>
+                    <p><strong>Duración:</strong> 60 a 90 minutos de presencia pura.</p>
+                    <p style="margin-top: 1.5rem; font-style: italic; font-size: 0.9rem;">
+                        "Una sesión para restaurar tu equilibrio natural a través de plantas, aceites naturales y puntos
+                        de acupresión."
+                    </p>
                 </div>
             </div>
 
-            <a href="https://wa.me/573025611010?text=Hola,%20me%20gustaría%20agendar%20una%20clase%20de%20Kundalini%20Yoga"
+            <div class="disclaimer-box"
+                style="margin-top: 3rem; padding: 1.5rem; border: 1px solid var(--accent-color); border-radius: 10px; background: rgba(143, 151, 121, 0.05); text-align: left; font-size: 0.9rem;">
+                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem; text-transform: uppercase;">Aviso de
+                    Bienestar</h4>
+                <p style="color: var(--text-muted); line-height: 1.6;">
+                    Este tratamiento es de carácter holístico y relajante. No sustituye tratamientos dermatológicos
+                    médicos.
+                    Por favor informa sobre cualquier sensibilidad o condición especial antes de iniciar la sesión.
+                </p>
+            </div>
+
+            <a href="https://wa.me/573025611010?text=Hola,%20quisiera%20más%20información%20sobre%20la%20Terapia%20Capilar%20Consciente"
                 class="whatsapp-btn" target="_blank">
-                Agendar Mi Clase
+                Agendar Mi Sesión
             </a>
         </div>
     </section>
 
     <footer>
         <div class="social-icons" style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem;">
-            <a href="https://wa.me/573025611010?text=Conecta%20conmigo%20directamente:" target="_blank"
-                aria-label="WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#b0b0b0">
+            <!-- Footer SVGs (identical to Psilocibina.html) -->
+            <a href="https://wa.me/573025611010" target="_blank"><svg width="24" height="24" fill="#b0b0b0"
+                    viewBox="0 0 24 24">
                     <path
                         d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-                </svg>
-            </a>
-            <a href="https://instagram.com/victoriamerling" target="_blank" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#b0b0b0">
+                </svg></a>
+            <a href="https://instagram.com/victoriamerling" target="_blank"><svg width="24" height="24" fill="#b0b0b0"
+                    viewBox="0 0 24 24">
                     <path
                         d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-            </a>
-            <a href="https://www.tiktok.com/@victoriamerling" target="_blank" aria-label="TikTok">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#b0b0b0">
-                    <path
-                        d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.01 1.74 4.05 1.11.96 2.58 1.41 4.03 1.47v3.91c-1.24-.03-2.48-.32-3.6-.89-1.07-.57-1.98-1.42-2.58-2.45v8.01c.01 1.63-.44 3.24-1.39 4.54-1.35 1.81-3.66 2.89-5.91 2.83-2.25-.06-4.32-1.34-5.32-3.37-1.12-2.28-.68-5.18 1.17-6.95 1.15-1.08 2.76-1.61 4.31-1.39v3.91c-.81-.13-1.66.1-2.25.68-.62.61-.83 1.57-.46 2.37.38.82 1.3 1.3 2.19 1.14.92-.16 1.54-.99 1.52-1.92V.02z" />
-                </svg>
-            </a>
+                </svg></a>
         </div>
         <p>&copy; 2026 Victoria Merling. Todos los derechos reservados.</p>
     </footer>

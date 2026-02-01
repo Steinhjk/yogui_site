@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kundalini Yoga | Victoria Merling</title>
+    <title>Terapia Holística | Victoria Merling</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,8 +14,7 @@
     <style>
         .service-page-hero {
             height: 60vh;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../kundalini_yoga.jpg');
-            /* Use existing image or placeholder */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../hero_background.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -46,10 +45,35 @@
             gap: 0.5rem;
             transition: transform 0.3s;
             margin-top: 2rem;
+            text-decoration: none;
         }
 
         .whatsapp-btn:hover {
             transform: scale(1.05);
+        }
+
+        .inclusion-list {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+            text-align: left;
+            margin: 2rem 0;
+            color: var(--text-main);
+        }
+
+        .inclusion-list li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .bonus-box {
+            background-color: rgba(143, 151, 121, 0.1);
+            border: 1px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -61,8 +85,9 @@
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="../index.html#medicina-ancestral">Servicios</a></li>
+            <li><a href="../recursos/index.html">Recursos</a></li>
             <li><a href="../tienda.html">Tienda</a></li>
-            <li><a href="../tienda/index.html">Tienda</a></li>
+            <li><a href="../index.html#quien-soy">Quién Soy</a></li>
             <li class="nav-social-icons" style="display: flex; gap: 0.5rem; margin-left: 1rem;">
                 <a href="https://wa.me/573025611010?text=Conecta%20conmigo%20directamente:" target="_blank"
                     aria-label="WhatsApp">
@@ -92,54 +117,40 @@
 
     <header class="service-page-hero">
         <div class="hero-content">
-            <h1>SESIÓN VIBRACIÓN</h1>
-            <p>Kundalini Yoga y Meditación</p>
+            <h1>TERAPIA HOLÍSTICA</h1>
+            <p>Terapia Holística Integral - Sesión Personalizada</p>
         </div>
     </header>
 
     <section class="service-content">
-        <div class="container" style="text-align: center; max-width: 800px;">
-            <p
-                style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.4rem; margin-bottom: 2rem; color: var(--secondary-color);">
-                "La verdad es la virtud suprema, pero más suprema aún es la vida veraz." <br>
-                <span style="font-size: 1rem; font-style: normal; color: var(--accent-color);">— Guru Nanak</span>
-            </p>
+        <div class="container" style="max-width: 800px; text-align: center;">
+            <h2 class="white-text">¿Qué incluye tu sesión?</h2>
 
-            <div class="services-grid-container"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; width: 100%; margin-top: 2rem; text-align: left;">
-                <div class="info-section"
-                    style="border: 1px solid var(--accent-color); padding: 2rem; border-radius: 15px; background: rgba(143, 151, 121, 0.05);">
-                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">Inversión</h3>
-                    <p><strong>Personalizada:</strong> $70.000</p>
-                    <p><strong>Grupal:</strong> $50.000</p>
-                    <p style="margin-top: 1rem;"><strong>Modalidad:</strong> Presencial / Virtual</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">(Duración: 60-90 min)
-                    </p>
-                </div>
+            <div
+                style="background: rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                <p style="font-size: 1.5rem; color: var(--secondary-color); margin-bottom: 2rem; font-weight: 600;">
+                    Inversión: $ 200.000 <br>
+                    <span style="font-size: 1.1rem; font-weight: 400; color: var(--text-muted);">(60-90 min)</span>
+                </p>
 
-                <div class="info-section">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Estructura de una Clase</h3>
-                    <p style="margin-bottom: 1rem; color: var(--text-muted);">Una clase clásica de Kundalini Yoga sigue
-                        una secuencia sagrada diseñada para elevar la consciencia:</p>
-                    <ol style="color: var(--text-main); padding-left: 1.2rem;">
-                        <li><strong>Sintonización:</strong> Canto del Adi Mantra para conectar con la sabiduría
-                            interior.</li>
-                        <li><strong>Pranayama:</strong> Ejercicios de respiración para dirigir la energía vital.</li>
-                        <li><strong>Calentamiento:</strong> Movimientos suaves para preparar la columna y el cuerpo.
-                        </li>
-                        <li><strong>Kriya:</strong> Una serie de ejercicios específicos con un objetivo determinado
-                            (detox, vitalidad, calma, etc.).</li>
-                        <li><strong>Relajación Profunda:</strong> Integración de los beneficios físicos y energéticos.
-                        </li>
-                        <li><strong>Meditación:</strong> Enfoque mental y uso de mantras para la transformación.</li>
-                        <li><strong>Cierre:</strong> El Eterno Sol y bendición final.</li>
-                    </ol>
+                <ul class="inclusion-list">
+                    <li><strong>Espacio seguro y cálido de contención emocional:</strong> Con un ambiente de confianza
+                        donde puedes expresarte libremente y reconocerte.</li>
+                    <li><strong>Pranayama guiado:</strong> Para relajar el cuerpo y abrir tu canal energético.</li>
+                    <li><strong>Terapia central:</strong> Según tus necesidades aplicamos técnicas específicas para ti.
+                    </li>
+                    <li><strong>Cierre terapéutico e integración:</strong> Te guio en una meditación final para sellar
+                        la energía, integrar lo vivido y volver al presente con claridad y calma.</li>
+                </ul>
+
+                <div class="bonus-box">
+                    (TE OBSEQUIAMOS UN BAÑO DE PLANTAS)
                 </div>
             </div>
 
-            <a href="https://wa.me/573025611010?text=Hola,%20me%20gustaría%20agendar%20una%20clase%20de%20Kundalini%20Yoga"
+            <a href="https://wa.me/573025611010?text=Hola,%20quisiera%20más%20información%20sobre%20la%20Terapia%20Holística"
                 class="whatsapp-btn" target="_blank">
-                Agendar Mi Clase
+                Agendar Mi Sesión
             </a>
         </div>
     </section>
