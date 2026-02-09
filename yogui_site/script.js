@@ -1,4 +1,4 @@
-// Mobile Interaction
+﻿// Mobile Interaction
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -138,14 +138,14 @@ function openServiceModal(serviceId) {
     if (modal) {
         // Set dynamic text based on ID (Simple version)
         if (serviceId === 'macro') {
-            title.innerText = "Reserva: Sesión Macro";
-            desc.innerText = "Estás a punto de reservar la Sesión Niños Santos ($800.000).";
+            title.innerText = "Reserva: SesiÃ³n Macro";
+            desc.innerText = "EstÃ¡s a punto de reservar la SesiÃ³n NiÃ±os Santos ($800.000).";
         } else if (serviceId === 'micro-pack') {
             title.innerText = "Compra: Paquete Micro Dosis";
             desc.innerText = "Inicia tu viaje de 1 mes con el Kit completo ($1.500.000).";
         } else if (serviceId === 'terapia') {
-            title.innerText = "Reserva: Terapia Holística";
-            desc.innerText = "Sesión personalizada de 60-90 minutos ($200.000).";
+            title.innerText = "Reserva: Terapia HolÃ­stica";
+            desc.innerText = "SesiÃ³n personalizada de 60-90 minutos ($200.000).";
         } else {
             title.innerText = "Pago de Servicio";
             desc.innerText = "Proceder al pago seguro con Wompi.";
@@ -168,10 +168,10 @@ function closeServiceModal() {
 // WOMPI PAYMENT INTEGRATION
 // ===========================================
 
-// Configuración del backend
+// ConfiguraciÃ³n del backend
 const WOMPI_BACKEND_URL = 'http://localhost:3000';
 
-// Catálogo de productos (espejo del backend)
+// CatÃ¡logo de productos (espejo del backend)
 const WOMPI_PRODUCTS = {
     'cordyceps': {
         id: 'cordyceps',
@@ -180,7 +180,7 @@ const WOMPI_PRODUCTS = {
     },
     'melena-de-leon': {
         id: 'melena-de-leon',
-        name: 'Melena de León',
+        name: 'Melena de LeÃ³n',
         priceInCents: 9000000
     }
 };
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
         quantityInput.addEventListener('input', updateWompiTotal);
     }
 
-    // Manejar envío del formulario
+    // Manejar envÃ­o del formulario
     const customerForm = document.getElementById('wompi-customer-form');
     if (customerForm) {
         customerForm.addEventListener('submit', handleWompiFormSubmit);
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * Maneja el envío del formulario de datos del cliente
+ * Maneja el envÃ­o del formulario de datos del cliente
  * @param {Event} e - Evento del formulario
  */
 async function handleWompiFormSubmit(e) {
@@ -262,7 +262,7 @@ async function handleWompiFormSubmit(e) {
     submitBtn.disabled = true;
 
     try {
-        // Crear sesión de pago en el backend
+        // Crear sesiÃ³n de pago en el backend
         const response = await fetch(`${WOMPI_BACKEND_URL}/api/payment/create-session`, {
             method: 'POST',
             headers: {
@@ -277,7 +277,7 @@ async function handleWompiFormSubmit(e) {
 
         if (!response.ok) {
             const error = await response.json();
-            throw new Error(error.error || 'Error creando sesión de pago');
+            throw new Error(error.error || 'Error creando sesiÃ³n de pago');
         }
 
         const sessionData = await response.json();
@@ -299,7 +299,7 @@ async function handleWompiFormSubmit(e) {
 
 /**
  * Abre el widget de checkout de Wompi
- * @param {object} sessionData - Datos de la sesión de pago
+ * @param {object} sessionData - Datos de la sesiÃ³n de pago
  */
 function openWompiWidget(sessionData) {
     const checkout = new WidgetCheckout({
@@ -325,7 +325,7 @@ function openWompiWidget(sessionData) {
         if (transaction) {
             handlePaymentResult(transaction);
         } else {
-            // Usuario cerró el widget sin completar
+            // Usuario cerrÃ³ el widget sin completar
             console.log('Pago cancelado por el usuario');
         }
     });
@@ -333,7 +333,7 @@ function openWompiWidget(sessionData) {
 
 /**
  * Maneja el resultado del pago
- * @param {object} transaction - Datos de la transacción
+ * @param {object} transaction - Datos de la transacciÃ³n
  */
 function handlePaymentResult(transaction) {
     const resultContent = document.getElementById('payment-result-content');
@@ -344,12 +344,12 @@ function handlePaymentResult(transaction) {
         case 'APPROVED':
             html = `
                 <div style="color: #28a745; font-size: 4rem; margin-bottom: 1rem;">&#10004;</div>
-                <h2 style="color: #28a745;">¡Pago Exitoso!</h2>
+                <h2 style="color: #28a745;">Â¡Pago Exitoso!</h2>
                 <p style="margin: 1rem 0;">Tu pedido ha sido procesado correctamente.</p>
                 <p><strong>Referencia:</strong> ${transaction.reference}</p>
-                <p><strong>ID Transacción:</strong> ${transaction.id}</p>
+                <p><strong>ID TransacciÃ³n:</strong> ${transaction.id}</p>
                 <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #666;">
-                    Recibirás un correo de confirmación con los detalles del envío.
+                    RecibirÃ¡s un correo de confirmaciÃ³n con los detalles del envÃ­o.
                 </p>
                 <button class="btn-primary" style="margin-top: 1.5rem;" onclick="closeModal('payment-result')">Cerrar</button>
             `;
@@ -362,7 +362,7 @@ function handlePaymentResult(transaction) {
                 <p style="margin: 1rem 0;">Lo sentimos, tu pago no fue aprobado.</p>
                 <p><strong>Referencia:</strong> ${transaction.reference}</p>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    ${transaction.status_message || 'Por favor intenta con otro método de pago.'}
+                    ${transaction.status_message || 'Por favor intenta con otro mÃ©todo de pago.'}
                 </p>
                 <button class="btn-primary" style="margin-top: 1.5rem;" onclick="closeModal('payment-result')">Cerrar</button>
             `;
@@ -372,7 +372,7 @@ function handlePaymentResult(transaction) {
             html = `
                 <div style="color: #ffc107; font-size: 4rem; margin-bottom: 1rem;">&#9203;</div>
                 <h2 style="color: #856404;">Pago Pendiente</h2>
-                <p style="margin: 1rem 0;">Tu pago está siendo procesado.</p>
+                <p style="margin: 1rem 0;">Tu pago estÃ¡ siendo procesado.</p>
                 <p><strong>Referencia:</strong> ${transaction.reference}</p>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
                     Te notificaremos cuando se confirme el pago.
@@ -393,4 +393,15 @@ function handlePaymentResult(transaction) {
 
     resultContent.innerHTML = html;
     openModal('payment-result');
+}
+
+// Accordion Toggle Function
+function toggleAccordion(element) {
+    element.classList.toggle('active');
+    const content = element.nextElementSibling;
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+    }
 }

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Lotus Flower / Open Hands Abstract -->
+  <path d="M12 21c-4.5 0-8-3.5-8-8 0-4.5 5-11 8-11s8 6.5 8 11c0 4.5-3.5 8-8 8z" stroke-width="2.5" />
+  <path d="M12 21c0-4.5-2.5-7-4-8" stroke-width="2" />
+  <path d="M12 21c0-4.5 2.5-7 4-8" stroke-width="2" />
+  <circle cx="12" cy="9" r="2" fill="currentColor" />
+  
+  <!-- Radiating lines for "Holistic" energy -->
+  <path d="M12 2v2" />
+  <path d="M4.93 4.93l1.41 1.41" />
+  <path d="M19.07 4.93l-1.41 1.41" />
+</svg>

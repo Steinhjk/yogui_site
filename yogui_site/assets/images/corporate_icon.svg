@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Minimalist Tree / Growth Graph -->
+  <path d="M12 20V10" />
+  <path d="M12 20a4 4 0 0 1-4-4c0-2 2-3 4-3s4 1 4 3a4 4 0 0 1-4 4z" stroke="none" /> <!-- Base circle implied or minimalist -->
+  
+  <!-- Trunk and Branches -->
+  <path d="M12 22v-8" stroke-width="2.5" />
+  <path d="M12 14c-2-2-4-3-6-2" stroke-width="2.5" />
+  <path d="M12 14c2-2 4-3 6-2" stroke-width="2.5" />
+  
+  <!-- Leaves / Circles for growth nodes -->
+  <circle cx="6" cy="12" r="1.5" fill="currentColor" />
+  <circle cx="18" cy="12" r="1.5" fill="currentColor" />
+  <circle cx="12" cy="8" r="1.5" fill="currentColor" />
+  
+  <!-- Framing Circle (optional, keep open for minimalist look) -->
+  <path d="M3 12a9 9 0 0 1 18 0" opacity="0.5" stroke-width="1.5" stroke-dasharray="4 4"/>
+</svg>

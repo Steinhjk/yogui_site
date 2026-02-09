@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Mushroom Cap -->
+  <path d="M12 4c-4.4 0-8 3-8 6.5 0 2 1.5 3.5 4 3.5h8c2.5 0 4-1.5 4-3.5C20 7 16.4 4 12 4z" />
+  
+  <!-- Stem -->
+  <path d="M12 14v6" stroke-width="3" />
+  <path d="M9 20h6" stroke-width="2" />
+  
+  <!-- Gills (optional, simple lines under cap) -->
+  <path d="M12 14c-1.5 0-2.5-1-2.5-1" stroke-width="1.5" />
+  <path d="M12 14c1.5 0 2.5-1 2.5-1" stroke-width="1.5" />
+</svg>

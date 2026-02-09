@@ -82,7 +82,6 @@
             <h2 class="white-text">INTENCIÓN</h2>
             <div class="intention-content">
                 <p>
-                    Mi nombre es Maria Victoria Merling Ruano y mi lema es el Amor.
                     He creado este rincón para acompañarte a reconectar con lo que siempre ha estado ahí: tu esencia.
                     Entiendo este sendero como un servicio para que, juntos, recuperemos la presencia que el mundo
                     moderno a veces nos quita.
@@ -105,7 +104,7 @@
                 <div class="package-card micro-card" onclick="window.location.href='servicios/psilocibina.html'">
                     <div class="package-header">
                         <div class="service-logo">
-                            <img src="mushroom_icon.png" alt="Mushroom Icon">
+                            <img src="assets/images/mushroom_icon_v2.png" alt="Mushroom Icon">
                         </div>
                         <h3>Sesión con<br><span>Psilocibina</span></h3>
                         <p class="service-info-text">Información de sesiones con hongos y sus beneficios.</p>
@@ -119,7 +118,7 @@
                     onclick="window.location.href='servicios/terapia-capilar-consciente.html'">
                     <div class="package-header">
                         <div class="service-logo">
-                            <img src="plant_icon.png" alt="Terapia Capilar Consciente Icon">
+                            <img src="assets/images/plant_icon_v2.png" alt="Terapia Capilar Consciente Icon">
                         </div>
                         <h3>Terapia<br><span>Capilar Consciente</span></h3>
                         <p class="service-info-text">Terapia de masaje capilar y relajación profunda.</p>
@@ -133,7 +132,7 @@
                 <div class="package-card micro-card" onclick="window.location.href='servicios/yoga.html'">
                     <div class="package-header">
                         <div class="service-logo">
-                            <img src="meditation_icon.png" alt="Meditation Icon">
+                            <img src="assets/images/meditation_icon_v2.png" alt="Meditation Icon">
                         </div>
                         <h3>Sesiones de<br><span>Kundalini Yoga y Meditación</span></h3>
                         <p class="service-info-text">Clases y sesiones guiadas para el bienestar integral.</p>
@@ -147,10 +146,24 @@
                 <div class="package-card micro-card" onclick="window.location.href='servicios/sesion-unica.html'">
                     <div class="package-header">
                         <div class="service-logo">
-                            <img src="holistic_icon.png" alt="Holistic Icon">
+                            <img src="assets/images/holistic_icon_v2.png" alt="Holistic Icon">
                         </div>
                         <h3>Terapia<br><span>Holística</span></h3>
                         <p class="service-info-text">Sesiones holísticas personalizadas para el bienestar integral.</p>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn-outline wompi-btn">Más Información</button>
+                    </div>
+                </div>
+
+                <!-- 5. Servicios a tu Empresa -->
+                <div class="package-card micro-card" onclick="window.location.href='servicios/empresa.html'">
+                    <div class="package-header">
+                        <div class="service-logo">
+                            <img src="assets/images/corporate_icon_v2.png" alt="Corporate Icon">
+                        </div>
+                        <h3>Servicios a tu<br><span>Empresa</span></h3>
+                        <p class="service-info-text">Programas de bienestar corporativo, yoga y pausas activas.</p>
                     </div>
                     <div class="package-footer">
                         <button class="btn-outline wompi-btn">Más Información</button>
@@ -162,7 +175,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="quien-soy" class="section about mystical-bg bg-quien-soy">
+    <section id="quien-soy" class="section about">
         <div class="container">
             <h2>¿Quién Soy?</h2>
             <div class="about-content">
@@ -179,13 +192,75 @@
                 </div>
                 <div class="about-image-placeholder">
                     <div class="profile-container">
-                        <img src="victoria_profile.jpg" alt="Victoria Merling" class="profile-img">
+                        <img src="assets/images/victoria_profile.jpg" alt="Victoria Merling" class="profile-img">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+    <!-- Team Section -->
+    <section id="equipo" class="section team-section bg-dark">
+        <div class="container">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-content">
+                <p class="section-desc">
+                    Contamos con un equipo de terapeutas, psicólogos y yoguis dedicados a tu bienestar integral.
+                </p>
+
+                <div class="team-accordion">
+                    <!-- Accordion Item 1: Psychologists/Holistic Therapists -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            Psicólogos / Terapeutas Holísticos
+                            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="team-grid-inner">
+                                <!-- Placeholder Member -->
+                                <div class="team-member small-card">
+                                    <div class="team-photo-placeholder small-photo">
+                                        <div class="photo-circle"></div>
+                                    </div>
+                                    <h3>Nombre del Terapeuta</h3>
+                                    <p class="role">Psicólogo / Terapeuta Holístico</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2: Instructors -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            Instructores de Kundalini Yoga & Meditación
+                            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="team-grid-inner">
+                                <!-- Jose Arbelaez -->
+                                <div class="team-member small-card">
+                                    <div class="team-photo-placeholder small-photo">
+                                        <div class="photo-circle"></div>
+                                    </div>
+                                    <h3>Jose Arbelaez</h3>
+                                    <p class="role">Instructor de Kundalini Yoga & Meditación</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="social-icons">

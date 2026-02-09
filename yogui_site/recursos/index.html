@@ -16,7 +16,7 @@
         .recursos-hero {
             height: 50vh;
             /* Increased presence */
-            background-image: linear-gradient(rgba(13, 13, 12, 0.3), rgba(13, 13, 12, 0.8)), url('../hero_background.jpg');
+            background-image: linear-gradient(rgba(13, 13, 12, 0.3), rgba(13, 13, 12, 0.8)), url('../assets/images/hero_background.jpg');
             background-size: cover;
             background-position: center 20%;
             display: flex;
@@ -32,7 +32,7 @@
         }
 
         .resources {
-            background-color: var(--dark-bg);
+            background-color: #1a1a18 !important;
             padding: 4rem 10%;
         }
 
@@ -83,6 +83,70 @@
             color: var(--primary-color);
         }
     </style>
+    <style>
+        /* PDF Viewer Modal */
+        .pdf-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pdf-modal-content {
+            background-color: #1a1a18;
+            width: 90%;
+            height: 90%;
+            max-width: 1200px;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .pdf-header {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pdf-header h3 {
+            margin: 0;
+            color: var(--primary-color);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .close-btn {
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: var(--accent-color);
+        }
+
+        #pdf-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0 0 8px 8px;
+            background-color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -127,7 +191,7 @@
         <h1>Recursos para el Camino</h1>
     </header>
 
-    <section id="recursos" class="section resources mystical-bg bg-recursos">
+    <section id="recursos" class="section resources">
         <div class="container">
             <div class="tabs">
                 <button class="tab-link active" onclick="openTab(event, 'Videos')">Videos</button>
@@ -149,7 +213,7 @@
                             title="Kundalini Yoga" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <h3>Kundalini Yoga: El Despertar</h3>
+                        <h3>Kundalini yoga: Sana el cuerpo y aumenta el resplandor</h3>
                     </div>
                     <div class="resource-card video-card">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/_b6cmnpII9U"
@@ -179,6 +243,13 @@
                             allowfullscreen></iframe>
                         <h3>Kundalini Yoga en Español</h3>
                     </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/wYTBd01437M?start=189"
+                            title="Meditación Guiada" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Meditación Profunda</h3>
+                    </div>
                 </div>
             </div>
 
@@ -187,26 +258,99 @@
                     <div class="resource-card book-card">
                         <div class="icon">📖</div>
                         <h3>El Poder del Ahora</h3>
-                        <a href="https://static.wixstatic.com/ugd/c33f8d_0a950cb5514b433b934e62973957252f.pdf"
-                            target="_blank" class="btn-small">Descargar</a>
+                        <button
+                            onclick="openBook('../assets/books/Tolle-Eckhart-El-Poder-del-Ahora.pdf', 'El Poder del Ahora')"
+                            class="btn-small tab-link">Leer Aquí</button>
                     </div>
                     <div class="resource-card book-card">
                         <div class="icon">📖</div>
                         <h3>Autobiografía de un Yogui</h3>
-                        <a href="https://formarse.com.ar/libros/Libros%20para%20descargar%20de%20maestros%20espirituales/Autobiograf%C3%ADa-de-un-yogi.pdf"
-                            target="_blank" class="btn-small">Descargar</a>
+                        <button
+                            onclick="openBook('../assets/books/Autobiografía-de-un-yogi.pdf', 'Autobiografía de un Yogui')"
+                            class="btn-small tab-link">Leer Aquí</button>
                     </div>
                     <div class="resource-card book-card">
                         <div class="icon">🍄</div>
                         <h3>Psilocibes: The Mushrooms</h3>
-                        <a href="https://www.researchgate.net/profile/Jose-Carlos-Bouso/publication/331400061_Psilocibes_-the_mushrooms-/links/5c77c488458515831f75e431/Psilocibes-the-mushrooms.pdf"
-                            target="_blank" class="btn-small">Descargar</a>
+                        <button
+                            onclick="openBook('../assets/books/Psilocibes-themushrooms-.pdf', 'Psilocibes: The Mushrooms')"
+                            class="btn-small tab-link">Leer Aquí</button>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">🕊️</div>
+                        <h3>Un Curso de Milagros</h3>
+                        <button onclick="openBook('../assets/books/ucdm-2016-10-14.pdf', 'Un Curso de Milagros')"
+                            class="btn-small tab-link">Leer Aquí</button>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">🕉️</div>
+                        <h3>Bhagavad Gita</h3>
+                        <button onclick="openBook('../assets/books/BhagavadGita.pdf', 'Bhagavad Gita')"
+                            class="btn-small tab-link">Leer Aquí</button>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">☸️</div>
+                        <h3>Guía de los Bodhisattvas</h3>
+                        <button
+                            onclick="openBook('../assets/books/Shantideva_Guia_de_los_Bodhisattvas.pdf', 'Guía de los Bodhisattvas')"
+                            class="btn-small tab-link">Leer Aquí</button>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">🏔️</div>
+                        <h3>El Hombre en busca de Sentido</h3>
+                        <button
+                            onclick="openBook('../assets/books/Frankl-Viktor-El-hombre-en-busca-de-sentido.pdf', 'El Hombre en busca de Sentido')"
+                            class="btn-small tab-link">Leer Aquí</button>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">📜</div>
+                        <h3>Japji Sahib</h3>
+                        <button onclick="openBook('../assets/books/ElJapJi.pdf', 'Japji Sahib')"
+                            class="btn-small tab-link">Leer Aquí</button>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">☪️</div>
+                        <h3>El Sagrado Corán</h3>
+                        <button onclick="openBook('../assets/books/Coran.pdf', 'El Sagrado Corán')"
+                            class="btn-small tab-link">Leer Aquí</button>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">✝️</div>
+                        <h3>La Santa Biblia</h3>
+                        <button onclick="openBook('../assets/books/biblia-reina-valera-1960.pdf', 'La Santa Biblia')"
+                            class="btn-small tab-link">Leer Aquí</button>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">🧘</div>
+                        <h3>Udana: Palabras del Buda</h3>
+                        <button
+                            onclick="openBook('../assets/books/Udana_Palabras_del_Buda.pdf', 'Udana: Palabras del Buda')"
+                            class="btn-small tab-link">Leer Aquí</button>
+                    </div>
+                    <div class="resource-card book-card">
+                        <div class="icon">📚</div>
+                        <h3>Biblioteca Externa</h3>
+                        <a href="https://www.bosquetheravada.org/" target="_blank" class="btn-small">Visitar Sitio</a>
                     </div>
                 </div>
             </div>
 
             <div id="Audios" class="tab-content">
                 <div class="resource-grid">
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/UHdf6l9cv2I"
+                            title="Meditación Mindfulness" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Meditación Mindfulness</h3>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/wZcLt8btJGg"
+                            title="Yoga para Principiantes" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Día 1 de reto de 20 días para aprender a meditar</h3>
+                    </div>
                     <div class="resource-card audio-card">
                         <div class="icon">🎧</div>
                         <h3>Meditación Shamatha</h3>
@@ -259,7 +403,46 @@
         <p>&copy; 2026 Victoria Merling. Todos los derechos reservados.</p>
     </footer>
 
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <div class="pdf-header">
+                <h3 id="pdfTitle">Lectura</h3>
+                <button class="close-btn" onclick="closeBook()">&times;</button>
+            </div>
+            <iframe id="pdf-frame" src="" type="application/pdf"></iframe>
+        </div>
+    </div>
+
     <script src="../script.js"></script>
+    <script>
+        function openBook(url, title) {
+            const modal = document.getElementById('pdfModal');
+            const frame = document.getElementById('pdf-frame');
+            const titleElem = document.getElementById('pdfTitle');
+
+            frame.src = url;
+            titleElem.textContent = title;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling background
+        }
+
+        function closeBook() {
+            const modal = document.getElementById('pdfModal');
+            const frame = document.getElementById('pdf-frame');
+
+            modal.style.display = 'none';
+            frame.src = ''; // Stop loading
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal if clicking outside content
+        window.onclick = function (event) {
+            const modal = document.getElementById('pdfModal');
+            if (event.target == modal) {
+                closeBook();
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Stylized Plant with Roots -->
+  <path d="M12 22v-8" stroke-width="3" /> <!-- Thick trunk -->
+  <path d="M12 14a5 5 0 0 0-5-5" />
+  <path d="M12 14a5 5 0 0 1 5-5" />
+  
+  <!-- Leaves -->
+  <path d="M7 9c-2 0-3-2-3-4s3-3 3-3 3 2 3 4" stroke-width="2" />
+  <path d="M17 9c2 0 3-2 3-4s-3-3-3-3-3 2-3 4" stroke-width="2" />
+  <path d="M12 10V6" />
+  
+  <!-- Roots -->
+  <path d="M12 22c-2 1-4 0-5-1" stroke-width="1.5" />
+  <path d="M12 22c2 1 4 0 5-1" stroke-width="1.5" />
+</svg>
