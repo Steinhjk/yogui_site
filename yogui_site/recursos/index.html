@@ -152,13 +152,14 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo"><a href="../index.html">Victoria Merling</a></div>
+        <div class="logo">Victoria Merling</div>
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="../index.html#quien-soy">Quién Soy</a></li>
             <li><a href="../servicios/index.html">Servicios</a></li>
-            <li><a href="index.html" style="color: var(--primary-color);">Recursos</a></li>
+            <li><a href="../recursos/index.html">Recursos</a></li>
             <li><a href="../tienda/index.html">Tienda</a></li>
+            <li><a href="../bitacora/index.html">Bitácora</a></li>
             <li class="nav-social-icons" style="display: flex; gap: 0.5rem; margin-left: 1rem;">
                 <a href="https://wa.me/573025611010?text=Conecta%20conmigo%20directamente:" target="_blank"
                     aria-label="WhatsApp">
@@ -200,27 +201,41 @@
             </div>
 
             <div id="Videos" class="tab-content active">
+                <div
+                    style="text-align: center; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; font-style: italic;">Aclaración: Los videos
+                        aquí reunidos son de acceso público, creados y alojados por otros maestros y canales. Nuestro
+                        deseo es simplemente facilitar un espacio donde esta bella obra pueda resonar libremente en ti.
+                    </p>
+                </div>
+
+                <style>
+                    .video-section-title {
+                        color: var(--primary-color);
+                        font-family: 'Cormorant Garamond', serif;
+                        font-size: 2rem;
+                        text-align: center;
+                        margin: 3rem 0 1.5rem 0;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        padding-bottom: 1rem;
+                    }
+                    .video-desc {
+                        color: #d0d0d0;
+                        font-size: 0.9rem;
+                        margin-top: 0.5rem;
+                        line-height: 1.4;
+                    }
+                </style>
+
+                <h2 class="video-section-title">Prácticas Guiadas</h2>
                 <div class="resource-grid">
-                    <div class="resource-card video-card">
-                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/bY8rZ-BG5D8"
-                            title="Curandera" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <h3>Curandera - Espíritu de la Tierra</h3>
-                    </div>
                     <div class="resource-card video-card">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/A8VcIVUPQLI"
                             title="Kundalini Yoga" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <h3>Kundalini yoga: Sana el cuerpo y aumenta el resplandor</h3>
-                    </div>
-                    <div class="resource-card video-card">
-                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/_b6cmnpII9U"
-                            title="Hongos Mágicos" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <h3>Hongos Mágicos: Ciencia y Terapia</h3>
+                        <h3>Kundalini yoga: Sana el cuerpo</h3>
+                        <p class="video-desc">Práctica guiada para sanar el cuerpo físico y potenciar tu campo energético mediante técnicas de respiración y movimiento.</p>
                     </div>
                     <div class="resource-card video-card">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/ZSsb7ZVKRxI"
@@ -228,13 +243,7 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                         <h3>Kundalini Yoga: Sahiba Kriya</h3>
-                    </div>
-                    <div class="resource-card video-card">
-                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/6iY2OL-bAtM"
-                            title="Psilocybe Ciencia Mística" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <h3>Psilocybe: La Ciencia de la Mística</h3>
+                        <p class="video-desc">Una poderosa kriya diseñada para equilibrar tu mente y sistema nervioso, ayudándote a alcanzar un estado de maestría interna.</p>
                     </div>
                     <div class="resource-card video-card">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/5d3mbHNRgxY"
@@ -242,6 +251,7 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                         <h3>Kundalini Yoga en Español</h3>
+                        <p class="video-desc">Clase completa de Kundalini Yoga enfocada en despertar la consciencia y desbloquear la energía estancada en los chakras.</p>
                     </div>
                     <div class="resource-card video-card">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/wYTBd01437M?start=189"
@@ -249,93 +259,252 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                         <h3>Meditación Profunda</h3>
+                        <p class="video-desc">Sesión inmersiva de meditación para calmar las perturbaciones de la mente y conectar con tu núcleo de paz interior.</p>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/QuSgCHyTJzE?start=6"
+                            title="Despertar y Medicina Sagrada" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>El llamado de la medicina</h3>
+                        <p class="video-desc">Una profunda reflexión sobre el uso respetuoso de las medicinas sagradas en los procesos de despertar y consciencia.</p>
+                    </div>
+                </div>
+
+                <h2 class="video-section-title">Documentales y Sabiduría</h2>
+                <div class="resource-grid">
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/B8SeNk6c7QQ?start=4"
+                            title="Ram Dass" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Ram Dass - Despertar Espiritual</h3>
+                        <p class="video-desc">Profundas reflexiones de Ram Dass sobre el viaje de la consciencia, el ego y el descubrimiento de la verdadera identidad.</p>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/hVYv9ktilQw?start=1"
+                            title="Sri Ramana Maharshi" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Sri Ramana Maharshi - Jnani</h3>
+                        <p class="video-desc">Documental sobre la vida y enseñanza (Autoindagación) del gran sabio de Arunachala, Sri Ramana Maharshi.</p>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/bY8rZ-BG5D8"
+                            title="Curandera" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Curandera - Espíritu de la Tierra</h3>
+                        <p class="video-desc">Documental que explora la sabiduría ancestral y la conexión sanadora con el espíritu de la Madre Tierra.</p>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/_b6cmnpII9U"
+                            title="Hongos Mágicos" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Hongos Mágicos: Ciencia y Terapia</h3>
+                        <p class="video-desc">Análisis científico sobre el resurgimiento de la terapia psicodélica y su impacto en el tratamiento de traumas y depresión.</p>
+                    </div>
+                    <div class="resource-card video-card">
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/6iY2OL-bAtM"
+                            title="Psilocybe Ciencia Mística" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3>Psilocybe: La Ciencia de la Mística</h3>
+                        <p class="video-desc">Una mirada fascinante a la intersección entre la ciencia de los enteógenos y la experiencia mística directa del ser.</p>
                     </div>
                 </div>
             </div>
 
             <div id="Libros" class="tab-content">
-                <div class="resource-grid">
-                    <div class="resource-card book-card">
-                        <div class="icon">📖</div>
-                        <h3>El Poder del Ahora</h3>
-                        <button
-                            onclick="openBook('../assets/books/Tolle-Eckhart-El-Poder-del-Ahora.pdf', 'El Poder del Ahora')"
-                            class="btn-small tab-link">Leer Aquí</button>
+                <div
+                    style="text-align: center; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <p style="color: var(--text-muted); font-size: 1.1rem; font-style: italic;">Todos estos libros son
+                        de acceso <strong>gratuito</strong> y pueden leerse directamente en esta página sin necesidad de
+                        descargas.</p>
+                </div>
+                <div class="book-list-container" style="max-width: 800px; margin: 0 auto;">
+                    <style>
+                        .book-list-item {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                            padding: 1.5rem 0;
+                            gap: 2rem;
+                            flex-wrap: wrap;
+                            transition: background-color 0.3s ease, transform 0.3s ease;
+                        }
+
+                        .book-list-item:hover {
+                            background-color: rgba(255, 255, 255, 0.02);
+                        }
+
+                        .book-list-info {
+                            flex: 1;
+                            min-width: 250px;
+                        }
+
+                        .book-list-info h4 {
+                            margin: 0 0 0.5rem 0;
+                            color: var(--accent-light);
+                            font-size: 1.25rem;
+                            font-weight: 500;
+                            letter-spacing: 0.5px;
+                        }
+
+                        .book-list-info p {
+                            margin: 0;
+                            color: #d0d0d0;
+                            font-size: 0.95rem;
+                            line-height: 1.5;
+                        }
+
+                        .book-list-action {
+                            flex-shrink: 0;
+                        }
+
+                        .book-list-btn {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0.6rem 1.8rem;
+                            border-radius: 30px;
+                            border: 1px solid var(--accent-light);
+                            color: var(--accent-light);
+                            background: transparent;
+                            font-size: 0.95rem;
+                            font-weight: 500;
+                            text-decoration: none;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                        }
+
+                        .book-list-btn:hover {
+                            background: var(--accent-light);
+                            color: #1a1a1a;
+                            transform: translateY(-2px);
+                            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+                        }
+                    </style>
+
+                    <div class="book-list-item">
+                        <div class="book-list-info">
+                            <h4>El Poder del Ahora - Eckhart Tolle</h4>
+                            <p>Guía hacia la iluminación espiritual liberándonos de la mente egoica.</p>
+                        </div>
+                        <div class="book-list-action">
+                            <button onclick="openBook('../assets/books/Tolle-Eckhart-El-Poder-del-Ahora.pdf', 'El Poder del Ahora')"
+                                class="book-list-btn">Leer</button>
+                        </div>
                     </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">📖</div>
-                        <h3>Autobiografía de un Yogui</h3>
-                        <button
-                            onclick="openBook('../assets/books/Autobiografía-de-un-yogi.pdf', 'Autobiografía de un Yogui')"
-                            class="btn-small tab-link">Leer Aquí</button>
+
+                    <div class="book-list-item">
+                        <div class="book-list-info">
+                            <h4>Autobiografía de un Yogui - Paramahansa Yogananda</h4>
+                            <p>Relato clásico sobre el viaje espiritual y los milagros de los Himalayas.</p>
+                        </div>
+                        <div class="book-list-action">
+                            <button
+                                onclick="openBook('../assets/books/Autobiografía-de-un-yogi.pdf', 'Autobiografía de un Yogui')"
+                                class="book-list-btn">Leer</button>
+                        </div>
                     </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">🍄</div>
-                        <h3>Psilocibes: The Mushrooms</h3>
-                        <button
-                            onclick="openBook('../assets/books/Psilocibes-themushrooms-.pdf', 'Psilocibes: The Mushrooms')"
-                            class="btn-small tab-link">Leer Aquí</button>
+
+                    <div class="book-list-item">
+                        <div class="book-list-info">
+                            <h4>Psilocibes: The Mushrooms - Paul Stamets</h4>
+                            <p>Revela el inmenso poder neurogénico y sanador oculto en la naturaleza.</p>
+                        </div>
+                        <div class="book-list-action">
+                            <button onclick="openBook('../assets/books/Psilocibes-themushrooms-.pdf', 'Psilocibes: The Mushrooms')"
+                                class="book-list-btn">Leer</button>
+                        </div>
                     </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">🕊️</div>
-                        <h3>Un Curso de Milagros</h3>
-                        <button onclick="openBook('../assets/books/ucdm-2016-10-14.pdf', 'Un Curso de Milagros')"
-                            class="btn-small tab-link">Leer Aquí</button>
+
+                    <div class="book-list-item">
+                        <div class="book-list-info">
+                            <h4>Un Curso de Milagros</h4>
+                            <p>Sistema de pensamiento espiritual centrado en la curación mediante el perdón absoluto.
+                            </p>
+                        </div>
+                        <div class="book-list-action">
+                            <button
+                                onclick="openBook('../assets/books/ucdm-2016-10-14.pdf', 'Un Curso de Milagros')"
+                                class="book-list-btn">Leer</button>
+                        </div>
                     </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">🕉️</div>
-                        <h3>Bhagavad Gita</h3>
-                        <button onclick="openBook('../assets/books/BhagavadGita.pdf', 'Bhagavad Gita')"
-                            class="btn-small tab-link">Leer Aquí</button>
+
+                    <div class="book-list-item">
+                        <div class="book-list-info">
+                            <h4>Bhagavad Gita</h4>
+                            <p>Diálogo épico que destila la esencia del yoga, el dharma y la trascendencia del alma.</p>
+                        </div>
+                        <div class="book-list-action">
+                            <button onclick="openBook('../assets/books/BhagavadGita.pdf', 'Bhagavad Gita')"
+                                class="book-list-btn">Leer</button>
+                        </div>
                     </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">☸️</div>
-                        <h3>Guía de los Bodhisattvas</h3>
-                        <button
-                            onclick="openBook('../assets/books/Shantideva_Guia_de_los_Bodhisattvas.pdf', 'Guía de los Bodhisattvas')"
-                            class="btn-small tab-link">Leer Aquí</button>
+
+                    <div class="book-list-item">
+                        <div class="book-list-info">
+                            <h4>Guía del Estilo de Vida del Bodhisattva - Shantideva</h4>
+                            <p>Instrucciones poéticas para cultivar la mente compasiva del despertar (Bodhicitta).</p>
+                        </div>
+                        <div class="book-list-action">
+                            <button
+                                onclick="openBook('../assets/books/Shantideva_Guia_de_los_Bodhisattvas.pdf', 'Guía del Estilo de Vida del Bodhisattva')"
+                                class="book-list-btn">Leer</button>
+                        </div>
                     </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">🏔️</div>
-                        <h3>El Hombre en busca de Sentido</h3>
-                        <button
-                            onclick="openBook('../assets/books/Frankl-Viktor-El-hombre-en-busca-de-sentido.pdf', 'El Hombre en busca de Sentido')"
-                            class="btn-small tab-link">Leer Aquí</button>
+
+                    <div class="book-list-item">
+                        <div class="book-list-info">
+                            <h4>El Hombre en busca de Sentido - Viktor Frankl</h4>
+                            <p>Experiencia profunda en los campos de concentración que da origen a la logoterapia.</p>
+                        </div>
+                        <div class="book-list-action">
+                            <button
+                                onclick="openBook('../assets/books/Frankl-Viktor-El-hombre-en-busca-de-sentido.pdf', 'El Hombre en busca de Sentido')"
+                                class="book-list-btn">Leer</button>
+                        </div>
                     </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">📜</div>
-                        <h3>Japji Sahib</h3>
-                        <button onclick="openBook('../assets/books/ElJapJi.pdf', 'Japji Sahib')"
-                            class="btn-small tab-link">Leer Aquí</button>
+
+                    <div class="book-list-item">
+                        <div class="book-list-info">
+                            <h4>Udana: Palabras del Buda</h4>
+                            <p>Una de las colecciones más antiguas de literatura budista con inspiradoras reflexiones.
+                            </p>
+                        </div>
+                        <div class="book-list-action">
+                            <button
+                                onclick="openBook('../assets/books/Udana_Palabras_del_Buda.pdf', 'Udana: Palabras del Buda')"
+                                class="book-list-btn">Leer</button>
+                        </div>
                     </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">☪️</div>
-                        <h3>El Sagrado Corán</h3>
-                        <button onclick="openBook('../assets/books/Coran.pdf', 'El Sagrado Corán')"
-                            class="btn-small tab-link">Leer Aquí</button>
-                    </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">✝️</div>
-                        <h3>La Santa Biblia</h3>
-                        <button onclick="openBook('../assets/books/biblia-reina-valera-1960.pdf', 'La Santa Biblia')"
-                            class="btn-small tab-link">Leer Aquí</button>
-                    </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">🧘</div>
-                        <h3>Udana: Palabras del Buda</h3>
-                        <button
-                            onclick="openBook('../assets/books/Udana_Palabras_del_Buda.pdf', 'Udana: Palabras del Buda')"
-                            class="btn-small tab-link">Leer Aquí</button>
-                    </div>
-                    <div class="resource-card book-card">
-                        <div class="icon">📚</div>
-                        <h3>Biblioteca Externa</h3>
-                        <a href="https://www.bosquetheravada.org/" target="_blank" class="btn-small">Visitar Sitio</a>
+
+                    <div class="book-list-item" style="border-bottom: none;">
+                        <div class="book-list-info">
+                            <h4>Biblioteca Externa (Theravada)</h4>
+                            <p>Explora grandes colecciones clásicas de sabiduría Theravada directas en su sitio oficial.
+                            </p>
+                        </div>
+                        <div class="book-list-action">
+                            <a href="https://www.bosquetheravada.org/" target="_blank" class="book-list-btn">Visitar
+                                Sitio</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div id="Audios" class="tab-content">
+                <div
+                    style="text-align: center; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; font-style: italic;">Aclaración: Las
+                        meditaciones y audios aquí reunidos son de acceso público, creados y alojados por otros maestros
+                        y canales. Nuestro deseo es simplemente facilitar un espacio donde esta bella obra pueda resonar
+                        libremente en ti.</p>
+                </div>
                 <div class="resource-grid">
                     <div class="resource-card video-card">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/UHdf6l9cv2I"

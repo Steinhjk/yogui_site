@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 100 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100" height="100" fill="#1A1A1A"/>
+    
+    <!-- Central Book -->
+    <path d="M50 30 C 50 30, 35 25, 20 35 L 20 75 C 35 65, 50 70, 50 70 Z" fill="#D4AF37"/>
+    <path d="M50 30 C 50 30, 65 25, 80 35 L 80 75 C 65 65, 50 70, 50 70 Z" fill="#D4AF37"/>
+    
+    <!-- Pages -->
+    <path d="M48 33 C 35 27, 25 35, 25 35 L 25 70 C 35 62, 48 68, 48 68 Z" fill="#F0E6D2"/>
+    <path d="M52 33 C 65 27, 75 35, 75 35 L 75 70 C 65 62, 52 68, 52 68 Z" fill="#F0E6D2"/>
+    
+    <!-- Spine -->
+    <rect x="48" y="30" width="4" height="42" fill="#8B6B22"/>
+
+    <!-- Left side: Headphones -->
+    <path d="M15 55 C 5 55, 5 40, 15 40" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <rect x="12" y="50" width="6" height="12" rx="3" fill="#D4AF37"/>
+    <rect x="12" y="38" width="6" height="12" rx="3" fill="#D4AF37"/>
+
+    <!-- Right side: Video Play Button -->
+    <circle cx="85" cy="50" r="10" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <polygon points="82,45 82,55 90,50" fill="#D4AF37"/>
+    
+    <!-- Magical Sparkles -->
+    <circle cx="50" cy="15" r="3" fill="#FFFFFF"/>
+    <circle cx="30" cy="20" r="2" fill="#D4AF37"/>
+    <circle cx="70" cy="20" r="2" fill="#D4AF37"/>
+</svg>

@@ -1,4 +1,4 @@
-﻿// Mobile Interaction
+// Mobile Interaction
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -405,3 +405,46 @@ function toggleAccordion(element) {
         content.style.maxHeight = content.scrollHeight + 'px';
     }
 }
+
+// Testimonials Carousel
+(function initTestimonialCarousel() {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('testimonial-prev');
+    const nextBtn = document.getElementById('testimonial-next');
+
+    if (!slides.length) return;
+
+    let current = 0;
+
+    function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => goTo(current - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => goTo(i));
+    });
+
+    // Auto-advance removed per user request
+})();
+
+// Team toggle
+function toggleTeam() {
+    const list = document.getElementById('team-flat-list');
+    const btn = document.getElementById('team-expand-btn');
+    const label = btn ? btn.querySelector('.team-expand-label') : null;
+    if (!list) return;
+    const isHidden = list.style.display === 'none' || list.style.display === '';
+    list.style.display = isHidden ? 'block' : 'none';
+    if (btn) btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    if (label) label.textContent = isHidden ? 'Ocultar equipo' : 'Ver equipo';
+}
+
+

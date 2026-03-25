@@ -22,9 +22,10 @@
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="../index.html#quien-soy">Quién Soy</a></li>
-            <li><a href="index.html" style="color: var(--secondary-color);">Servicios</a></li>
+            <li><a href="../servicios/index.html">Servicios</a></li>
             <li><a href="../recursos/index.html">Recursos</a></li>
             <li><a href="../tienda/index.html">Tienda</a></li>
+            <li><a href="../bitacora/index.html">Bitácora</a></li>
             <li class="nav-social-icons" style="display: flex; gap: 0.5rem; margin-left: 1rem;">
                 <a href="https://wa.me/573025611010?text=Conecta%20conmigo%20directamente:" target="_blank"
                     aria-label="WhatsApp">
@@ -56,7 +57,10 @@
     <!-- Services Section (Triad Layout) -->
     <section id="servicios" class="section services-triad mystical-bg bg-caminos" style="margin-top: 0;">
         <div class="container">
-            <h2 class="white-text">Caminos de Sanación</h2>
+            <h2 class="white-text">Caminos de Sanación</h2>\n <p class="services-enfoque"
+                style="max-width:800px; margin: 0 auto 3rem; text-align:center; color: var(--text-muted);">
+                <strong>Enfoque:</strong> Nuestras prácticas tienen un énfoque médico-científico de bienestar
+                fisiológico y neurológico. Respetamos todas las creencias.</p>
             <div class="triad-grid">
                 <!-- 1. Sesión hongos -->
                 <div class="package-card micro-card">
@@ -66,8 +70,16 @@
                         <h3>Sesión con<br><span>Psilocibina</span></h3>
                         <p class="service-info-text">Información de sesiones con hongos y sus beneficios.</p>
                     </div>
-                    <div class="package-footer"><button class="btn-outline wompi-btn"
-                            onclick="window.location.href='psilocibina.html'">Más Información</button></div>
+                    <div class="package-footer">
+                        <button class="btn-outline wompi-btn" onclick="window.location.href='psilocibina.html'">Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-arrow-right">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <!-- 2. Terapia Capilar Consciente -->
                 <div class="package-card micro-card" onclick="window.location.href='terapia-capilar-consciente.html'">
@@ -79,20 +91,36 @@
                         <p class="service-info-text">Terapia de masaje capilar y relajación profunda.</p>
                     </div>
                     <div class="package-footer">
-                        <button class="btn-outline wompi-btn">Más Información</button>
+                        <button class="btn-outline wompi-btn"
+                            onclick="window.location.href='terapia-capilar-consciente.html'">Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-arrow-right">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <!-- 3. Yoga y Meditación -->
                 <div class="package-card micro-card">
                     <div class="package-header">
-                        <div class="service-logo"><img src="../assets/images/meditation_icon_v2.png"
+                        <div class="service-logo"><img src="../assets/images/meditation_icon.png"
                                 alt="Meditation Icon">
                         </div>
                         <h3>Sesiones de<br><span>Kundalini Yoga y Meditación</span></h3>
                         <p class="service-info-text">Clases y sesiones guiadas para el bienestar integral.</p>
                     </div>
-                    <div class="package-footer"><button class="btn-outline wompi-btn"
-                            onclick="window.location.href='yoga.html'">Más Información</button></div>
+                    <div class="package-footer">
+                        <button class="btn-outline wompi-btn" onclick="window.location.href='yoga.html'">Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-arrow-right">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <!-- 4. Terapia Holística -->
                 <div class="package-card micro-card">
@@ -102,8 +130,16 @@
                         <h3>Terapia<br><span>Holística</span></h3>
                         <p class="service-info-text">Sesiones holísticas personalizadas para el bienestar integral.</p>
                     </div>
-                    <div class="package-footer"><button class="btn-outline wompi-btn"
-                            onclick="window.location.href='sesion-unica.html'">Más Información</button></div>
+                    <div class="package-footer">
+                        <button class="btn-outline wompi-btn" onclick="window.location.href='sesion-unica.html'">Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-arrow-right">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <!-- 5. Servicios a tu Empresa -->
                 <div class="package-card micro-card">
@@ -114,26 +150,44 @@
                         <h3>Servicios a tu<br><span>Empresa</span></h3>
                         <p class="service-info-text">Programas de bienestar corporativo, yoga y pausas activas.</p>
                     </div>
-                    <div class="package-footer"><button class="btn-outline wompi-btn"
-                            onclick="window.location.href='empresa.html'">Más Información</button></div>
+                    <div class="package-footer">
+                        <button class="btn-outline wompi-btn" onclick="window.location.href='empresa.html'">Ver más
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-arrow-right">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- 6. Psiloyoga -->
+                <div class="package-card micro-card" onclick="window.location.href='psiloyoga.html'">
+                    <div class="package-header">
+                        <div class="service-logo">
+                            <img src="../assets/images/psiloyoga_icon.png" alt="Psiloyoga Icon">
+                        </div>
+                        <h3>Psiloyoga<br><span>Kundalini y Medicina</span></h3>
+                        <p class="service-info-text">Práctica de Kundalini yoga con microdosis o dosis bajas de psilocibina.
+                        </p>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn-outline wompi-btn"
+                            onclick="window.location.href='psiloyoga.html'">Explorar
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-arrow-right">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Global Disclaimer Section -->
-    <section class="section"
-        style="background-color: #1a1a18; padding: 2rem 10%; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-        <div class="container" style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; font-style: italic;">
-                <strong>Nota Importante:</strong> El enfoque de nuestras prácticas de meditación y consciencia es
-                puramente médico-científico y secular, centrado en los beneficios neurológicos, fisiológicos y el
-                bienestar integral. Respetamos profundamente el credo, las creencias individuales o la ausencia de ellas
-                de cada persona. Nuestras sesiones físicas están diseñadas para la salud músculo-esquelética y la
-                reducción del estrés. Consulte con su médico antes de iniciar cualquier rutina de ejercicio.
-            </p>
-        </div>
-    </section>
+
 
     <!-- Service Modals -->
     <div id="modal-kundalini" class="modal">
