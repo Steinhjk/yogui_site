@@ -1396,7 +1396,10 @@ footer {
 
 /* Testimonials Carousel Section */
 .testimonials-section {
-    background: linear-gradient(135deg, #2a2218 0%, #1e1a12 50%, #231f18 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('assets/images/testimonios_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     text-align: center;
     padding: 5rem 10%;
     border-top: 1px solid rgba(143, 151, 121, 0.2);
@@ -1757,12 +1760,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Meditation Icon (3rd Card) Specific Size Increase */
-.triad-grid .package-card:nth-child(3) .service-logo img {
-    width: 110%;
-    height: 110%;
-    transform: scale(1.4);
-}
+
 
 /* Team Section Styles */
 /* Premium Team Section - Redesigned */
@@ -2061,12 +2059,9 @@ body {
     outline: none !important;
 }
 
-/* Ajuste específico para alejar el logo de Kundalini Yoga / Meditacion */
-.service-logo img[alt="Meditation Icon"] {
-    transform: scale(0.85) !important;
-    object-fit: contain !important;
-    /* Mantiene proporciones sin recortar */
-}
+
+
+
 
 /* =========================================
    PDF VIEWER MODAL
